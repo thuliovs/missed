@@ -8,6 +8,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.thuliotech.missed.presentation.home.HomeScreen
+import com.thuliotech.missed.presentation.map.MapScreen
 import com.thuliotech.missed.presentation.onboarding.BenefitsScreen
 import com.thuliotech.missed.presentation.onboarding.ExplanationScreen
 import com.thuliotech.missed.presentation.onboarding.LoginScreen
@@ -74,9 +75,19 @@ fun NavGraph(
 
             // Main App
             composable<Screen.Home> {
-                HomeScreen()
+                HomeScreen(
+                    onAddClick = { navController.navigate(Screen.Map) }
+                )
+            }
+
+            composable<Screen.Map> {
+                MapScreen(
+                    onCancel = { navController.popBackStack() },
+                    onConfirmDestination = { _ ->
+                        navController.popBackStack()
+                    }
+                )
             }
         }
     }
 }
-

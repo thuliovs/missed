@@ -255,7 +255,8 @@ project :app
   at org.gradle.internal.serialize.codecs.core.CollectingVisitor.startVisit(FileCollectionCodec.kt:185)
   at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:359)
   at org.gradle.api.internal.file.CompositeFileCollection.lambda$visitContents$0(CompositeFileCollection.java:113)
-  at org.gradle.api.internal.file.collections.UnpackingVisitor.add(UnpackingVisitor.java:67)
+  at org.gradle.api.internal.file.collections.UnpackingVisitor
+* .add(UnpackingVisitor.java:67)
   at org.gradle.api.internal.file.collections.DefaultConfigurableFileCollection$UnresolvedItemsCollector.visitContents(DefaultConfigurableFileCollection.java:616)
   at org.gradle.api.internal.file.collections.DefaultConfigurableFileCollection.visitChildren(DefaultConfigurableFileCollection.java:433)
   at org.gradle.api.internal.file.CompositeFileCollection.visitContents(CompositeFileCollection.java:113)
